@@ -29,7 +29,6 @@ function navBg() {
 }
 $('.navbar-toggler').click(function(){
 if (!$('#top-nav').hasClass('show')) {
-	// alert('zzz');
 	$('#nav-bg, #nav').css({
 		'background-color': '#343a40'
 	});
@@ -38,6 +37,33 @@ if (!$('#top-nav').hasClass('show')) {
 		'background-color': 'transparent'
 	});
 }
+});
+
+$('.navbar-link').click(function(){
+  if ($('.navbar-link').hasClass('active')) {
+    $('.navbar-link').removeClass('active');
+    $(this).addClass('active');
+  }
+});
+$('.home').click(function(){
+$("html, body").animate({
+  scrollTop: $('.jumbotron').offset().top
+}, 1000)
+});
+$('.services').click(function(){
+$("html, body").animate({
+  scrollTop: $('.mid').offset().top
+}, 1000)
+});
+$('.about').click(function(){
+$("html, body").animate({
+  scrollTop: $('.about-us-section').offset().top
+}, 1000)
+});
+$('.contact').click(function(){
+$("html, body").animate({
+  scrollTop: $('.green-area').offset().top
+}, 1000)
 });
 
 });
