@@ -19,10 +19,17 @@
         </button>
         <div class="collapse navbar-collapse" id="top-nav">
         <div class="navbar-top-left">
-        <a class="navbar-brand">
-          <img src="img/logo.png">
-        </a>
-        <a class="nav-left-dropdown" href="#">Den Haag</a>
+          <a class="navbar-brand">
+            <img src="img/logo.png">
+          </a>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Den Haag</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Hauge</a>
+            <a class="dropdown-item" href="#">Delft</a>
+            <a class="dropdown-item" href="#">Amsterdam</a>
+          </div>
+          </li>
         </div>
         <div class="navbar-top-right">
         <ul class="navbar-nav">
@@ -80,7 +87,7 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      <button type="button" class="btn btn-link v-a-s">VIEW ALL SERVICES</button>
+      <button type="button" class="btn btn-link dropdown-toggle v-a-s">VIEW ALL SERVICES</button>
       </header>
       <div class="grey-section">
         <div class="row grey-content">
@@ -291,7 +298,7 @@
               <p><i>Yours sencerely,</i></p>
               <img src="img/james-and-mathilda-signature.png">
               </div>
-              <button type="button" class="btn btn-link v-a-s btn-lower">More about us <img src="img/caret.png"></button>
+              <button type="button" class="btn btn-link v-a-s btn-lower">More about us <b class="right-caret"></b></button>
             </div>
           </div>
         </div>

@@ -11,16 +11,17 @@ var mySwiper = new Swiper ('.swiper-container', {
         clickable: true,
       },
 })
+window.onload = function() {navBg()};
 window.onscroll = function() {navBg()};
 function navBg() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("nav").classList.add("navbar-dark");
-        document.getElementById("nav").classList.add("bg-dark");
-        document.getElementById("nav-bg").classList.add("clr-dark");
+        $('#nav').addClass("navbar-dark");
+        $('#nav').addClass("bg-dark");
+        $('#nav-bg').addClass("clr-dark");
     } else {
-        document.getElementById("nav").classList.remove("navbar-dark");
-        document.getElementById("nav").classList.remove("bg-dark");
-        document.getElementById("nav-bg").classList.remove("clr-dark");
+        $('#nav').removeClass("navbar-dark");
+        $('#nav').removeClass("bg-dark");
+        $('#nav-bg').removeClass("clr-dark");
     }
 }
 $('.navbar-toggler').click(function(){
@@ -34,13 +35,13 @@ if (!$('#top-nav').hasClass('show')) {
 	});
 }
 });
-
 $('.navbar-link').click(function(){
   if ($('.navbar-link').hasClass('active')) {
     $('.navbar-link').removeClass('active');
     $(this).addClass('active');
   }
 });
+// moglo se resiti sa currentTarget(klasa) + "dodatak" sa 1 event handlom, ali drugom prilikom
 $('.home').click(function(){
 $("html, body").animate({
   scrollTop: $('.jumbotron').offset().top
